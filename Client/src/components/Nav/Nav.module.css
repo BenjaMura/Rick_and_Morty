@@ -1,0 +1,24 @@
+.nav {
+    width: auto;
+    padding: auto;
+    margin-top: 1rem;
+    justify-content: center;
+    border-radius: 2em;
+    height: 3em;
+    background-color: #1cc7d39b;
+}
+
+.btn {
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: solid;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    align-items: center;
+    width: 5rem;
+    font-size: medium;
+    opacity: 90%;
+    color: rgb(17, 51, 174);
+    cursor: pointer;
+}

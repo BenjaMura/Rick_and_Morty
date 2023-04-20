@@ -1,0 +1,29 @@
+.div {
+    display: inline-table;
+    margin: auto 1rem 2rem auto;
+    padding: auto;
+    width: 15rem;
+    height: 20rem;
+    border-radius: 20%;
+    background-color: rgb(176, 236, 108);
+    box-shadow: 5px 5px 5px #41e3cb;
+}
+
+.div h2 {
+    font-size: medium;
+    margin: 0.25rem;
+}
+
+.div img {
+    border: solid;
+    border-color: green;
+    border-radius: 2rem;
+    width: 50%;
+}
+
+.div button {
+    margin: 0.5rem;
+    color: red;
+    font-size: medium;
+    cursor: pointer;
+}

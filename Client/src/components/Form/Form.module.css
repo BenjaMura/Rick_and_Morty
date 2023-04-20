@@ -1,0 +1,34 @@
+.form_login {
+    font-family: italic;
+    font-size: 1.5em;
+    width: 50%;
+    height: auto;
+    padding: 25px;
+    margin: auto;
+    background-color: rgb(230, 230, 19);
+    margin-top: 50px;
+    border-radius: 20%;
+    box-shadow: 10px 10px 10px #c5cc07;
+    opacity: 90%;
+}
+
+.inputs {
+    width: 50%;
+    border: 2px solid #c5cc07;
+    padding: 5px;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+}
+
+.submit {
+    width: 50%;
+    padding: 5px;
+    font-size: 0.75em;
+    font-weight: bold;
+    border-radius: 0.5rem;
+}
+
+.labels {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
