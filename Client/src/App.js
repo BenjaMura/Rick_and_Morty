@@ -11,8 +11,8 @@ import Favorites from './components/Favorites/Favorites.jsx';
 
 // const URL_BASE = 'https://be-a-rym.up.railway.app/api/character';
 // const API_KEY = 'a4c1bfc1bcb8.f0289e75f09bae55aade';
-const email = 'benjaminmuratore1@gmail.com';
-const password = 'asd123';
+// const email = 'benjaminmuratore1@gmail.com';
+// const password = 'asd123';
 // https://be-a-rym.up.railway.app/api/character/7?key=a4c1bfc1bcb8.f0289e75f09bae55aade
 
 function App() {
@@ -21,14 +21,25 @@ function App() {
    const [characters, setCharacters] = useState([]);
    const [access, setAccess] = useState(false);
 
-   const login = (userData) => {
+   /* const login = (userData) => {
       if (userData.password === password && userData.email === email) {
          setAccess(true);
          navigate('/home');
       } else {
          alert('Las credenciales son incorrectas');
       }
-   };
+   }; */
+
+   const login = (userData) => {
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      axios(URL + `?email=${email}&password=${password}`)
+      .then(({ data }) => {
+         const { access } = data;
+         setAccess(access);
+         access && navigate('/home');
+      });
+   }
    
    useEffect(() => {
       !access && navigate('/')
