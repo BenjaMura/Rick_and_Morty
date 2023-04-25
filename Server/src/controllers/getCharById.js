@@ -31,32 +31,27 @@ module.exports = {
 const URL = 'https://rickandmortyapi.com/api/character/';
 const axios = require('axios');
 
-const getCharById = (request, response) => {
-    const { id } = request.params;
-    axios(`${URL}/${id}`)
-    .then(response => response.data)
-    .then(({ 
-        status,
-        name,
-        species,
-        origin,
-        image, 
-        gender }) => {
-        if (name) {
-            const character = {
-                id,
-                status,
-                name,
-                species,
-                origin,
-                image,
-                gender,
-            }
-            return response.status(200).json(character)
-        }
-        return response.status(404).send('Not found');
-    })
-    .catch(error => response.status(500).send(error.message))
+const getCharById = async (request, response) => {
+    try {
+        const { id } = request.params;
+        const { data } = await axios(`${URL}/${id}`)
+        if (!data.name) throw new Error (`Faltan datos del personaje con ID: ${id}`);
+        const character = {
+            id: data.id,
+            status: data.status,
+            name: data.name,
+            species: data.species,
+            origin: data.origin,
+            image: data.image,
+            gender: data.gender,
+        };
+        return response.status(200).json(character);
+        // return response.status(404).send('Not found');
+    } catch (error) {
+        return error.message.includes('ID')
+        ? response.status(404).send(error.message)
+        : response.status(500).send(error.response.data.error);
+    };
 };
 
 module.exports = {
