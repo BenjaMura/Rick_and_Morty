@@ -28,7 +28,7 @@ http.createServer((request, response) => {
     } */
 /* }).listen(3001, 'localhost'); */
 
-const { server } = require('./app');
+const server = require('./app');
 const PORT = 3001;
 
 server.listen(PORT, () => {
