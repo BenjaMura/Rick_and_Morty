@@ -1,3 +1,11 @@
+const server = require("./app");
+const { conn } = require("./db");
+const PORT = 3001;
+
+server.listen(PORT, async () => {
+  console.log(`Server raised in port: ${PORT}`);
+  await conn.sync({ force: true });
+});
 /* const http = require('http');
 const { getCharById } = require('./controllers/getCharById');
 
@@ -8,9 +16,9 @@ http.createServer((request, response) => {
         const id = request.url.split('/').at(-1);
         getCharById(response, +id);
     } */
-    
-    // const { url } = req;
-    /* if (request.url.includes('/rickandmorty/character')) {
+
+// const { url } = req;
+/* if (request.url.includes('/rickandmorty/character')) {
         const id = request.url.split('/').at(-1);
         const characterFound = data.find((character) => character.id == +id);
         return response
@@ -27,10 +35,3 @@ http.createServer((request, response) => {
         // }
     } */
 /* }).listen(3001, 'localhost'); */
-
-const server = require('./app');
-const PORT = 3001;
-
-server.listen(PORT, () => {
-    console.log(`Server raised in port: ${PORT}`);
-});
