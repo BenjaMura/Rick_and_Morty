@@ -39,7 +39,7 @@ function App() {
          setAccess(access);
          access && navigate('/home');
       } catch (error) {
-         console.log(error.message);
+         alert('Las credenciales son incorrectas');
       }
    }
    
