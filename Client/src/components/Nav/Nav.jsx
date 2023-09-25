@@ -1,8 +1,10 @@
 import SearchBar from '../SearchBar/SearchBar';
 import { Link, } from 'react-router-dom';
 import stylesNav from './Nav.module.css';
+import { useLocation } from 'react-router-dom';
 
 export default function Nav({ onSearch, setAccess }) {
+   const location = useLocation();
    const handleLogOut = () => {
       setAccess(false);
    }
@@ -19,7 +21,7 @@ export default function Nav({ onSearch, setAccess }) {
             <Link to='/favorites' style={{textDecoration: 'none'}} >Favorites</Link>
          </button>
          <button className={stylesNav.btn} onClick={handleLogOut}>Log Out</button>
-         <SearchBar onSearch={onSearch}/>
+         {location.pathname === '/home' ? <SearchBar onSearch={onSearch}/> : null}
       </nav>
    );
 }

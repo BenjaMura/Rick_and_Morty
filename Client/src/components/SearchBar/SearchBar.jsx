@@ -11,7 +11,7 @@ export default function SearchBar({onSearch}) {
 
    return (
       <div className={stylesSB.sb}>
-         <input className={stylesSB.inp} type='search' onChange={handleChange} value={id} placeholder='Number between 1 and 826...' />
+         <input className={stylesSB.inp} type='search' onChange={handleChange} value={id} placeholder='Number between 1 and 826' />
          <button className={stylesSB.btn} onClick={() => {onSearch(id); setId('')}}>Agregar</button>
       </div>
    );

@@ -13,7 +13,7 @@ import Favorites from './components/Favorites/Favorites.jsx';
 // const API_KEY = 'a4c1bfc1bcb8.f0289e75f09bae55aade';
 // const email = 'benjaminmuratore1@gmail.com';
 // const password = 'asd123';
-// https://be-a-rym.up.railway.app/api/character/7?key=a4c1bfc1bcb8.f0289e75f09bae55aade
+// const URL = 'https://be-a-rym.up.railway.app/api/character/7?key=a4c1bfc1bcb8.f0289e75f09bae55aade';
 const URL = 'http://localhost:3001/rickandmorty/login/';
 
 function App() {
@@ -21,15 +21,6 @@ function App() {
    const navigate = useNavigate();
    const [characters, setCharacters] = useState([]);
    const [access, setAccess] = useState(false);
-
-   /* const login = (userData) => {
-      if (userData.password === password && userData.email === email) {
-         setAccess(true);
-         navigate('/home');
-      } else {
-         alert('Las credenciales son incorrectas');
-      }
-   }; */
 
    const login = async (userData) => {
       try {
@@ -51,16 +42,18 @@ function App() {
       try {
          const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
          if (data.name) {
-            setCharacters((oldChars) => [...oldChars, data]);
+            const foundChar = characters.filter((char) => char.id === data.id);
+            if (foundChar.length > 0) throw Error;
+            else setCharacters((oldChars) => [...oldChars, data]);
          };    
       } catch (error) {
-         alert('¡No hay personajes con este ID!');
+         alert('¡No hay personajes con este ID o el mismo ya fue agregado!');
       }
       // .then(({ data }) => {
       //    if (data.name && !characters.find((char) => char.id === data.id)) {
       //       setCharacters((oldChars) => [...oldChars, data]);
       //    } else {
-      //       alert('Algo malió sal');
+      //       alert('Algo salió mal');
       //    }
       // });
    };

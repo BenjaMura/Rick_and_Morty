@@ -1,15 +1,18 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
 import Card from "../Card/Card.jsx";
 import stylesFavorites from './Favorites.modules.css'
-import { removeFav, orderCards, filterCards, reset } from "../../redux/actions.js";
-import { useState } from "react";
+import { removeFav, orderCards, filterCards, reset, getFavorites } from "../../redux/actions.js";
 
 const Favorites = ({ onClose }) => {
     const favorites = useSelector( (state) => state.myFavorites);
     
     const dispatch = useDispatch();
 
-    const [, setAux] = useState(false);
+    useEffect(() => {
+        if (!favorites.length) dispatch(getFavorites());
+    }, []);
 
     function closeFav(id) {
         onClose(id);
@@ -20,7 +23,6 @@ const Favorites = ({ onClose }) => {
         event.preventDefault();
         const {value} = event.target;
         dispatch(orderCards(value));
-        setAux(true);
     };
     
     function handleFilter (event) {
@@ -36,15 +38,13 @@ const Favorites = ({ onClose }) => {
     return (
         <div className={stylesFavorites.div}>
             <br/>
-            <br/>
-            <br/>
             <select style={{width: '15rem', height: '2rem'}} onChange={handleOrder} name='order' defaultValue={'DEFAULT'}>
-                <option value='DEFAULT' disable>Select Order</option>
+                <option value='DEFAULT' disabled>Select Order</option>
                 <option value='Ascendente'>Ascendente</option>
                 <option value='Descendente'>Descendente</option>
             </select>
             <select style={{width: '15rem', height: '2rem'}} onChange={handleFilter} name='filter' defaultValue={'DEFAULT'}>
-                <option value='DEFAULT' disable>Select Filter</option>
+                <option value='DEFAULT' disabled>Select Gender</option>
                 <option value='Male'>Male</option>
                 <option value='Female'>Female</option>
                 <option value='Genderless'>Genderless</option>
