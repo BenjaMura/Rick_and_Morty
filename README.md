@@ -48,4 +48,4 @@ npm -v
 
 <br/>
 
-![Rickandmorty](https://github.com/BenjaMura/Rick_and_Morty/main/Client/src/img/Rick-and-Morty-space)
+![Rickandmorty](https://github.com/BenjaMura/Rick_and_Morty/blob/main/Client/src/img/Rick-and-Morty-space.jpg)
