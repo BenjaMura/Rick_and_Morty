@@ -46,6 +46,6 @@ npm -v
 
 ---
 
-<br/>
+Credenciales para acceder ➡️ email: benjaminmuratore1@gmail.com password: asd123
 
 ![Rickandmorty](https://github.com/BenjaMura/Rick_and_Morty/blob/main/Client/src/img/Rick-and-Morty-space.jpg)
