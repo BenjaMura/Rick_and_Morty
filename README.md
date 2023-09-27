@@ -34,18 +34,6 @@ Para verificar que versión tienes instalada debes escribir en consola:
 node -v
 npm -v
 ```
-
-
-## **📥 PARA COMENZAR...**
-
-1. Clona el repositorio en tu computadora.
-
-2. Al abrir la carpeta debes iniciar Client y Server en una terminal nueva cada una.
-
-3. Hacer npm install y npm start en cada terminal para visualizar el proyecto (Orden recomendado: Server luego Client).
-
 ---
-
-Credenciales para acceder ➡️ email: benjaminmuratore1@gmail.com password: asd123
 
 ![Rickandmorty](https://github.com/BenjaMura/Rick_and_Morty/blob/main/Client/src/img/Rick-and-Morty-space.jpg)
