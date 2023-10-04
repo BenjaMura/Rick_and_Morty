@@ -36,6 +36,7 @@ npm -v
 ---
 
 ## **💻 DEMO**
-https://github.com/BenjaMura/Rick_and_Morty/blob/main/Client/src/img/RickAndMortyDemo.mp4
+
+[![Demo del Proyecto](https://user-images.githubusercontent.com)](https://github.com/BenjaMura/Rick_and_Morty/blob/main/Client/src/img/RickAndMortyDemo.mp4)
 
 ![Rickandmorty](https://github.com/BenjaMura/Rick_and_Morty/blob/main/Client/src/img/Rick-and-Morty-space.jpg)
