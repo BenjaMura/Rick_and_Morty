@@ -6,10 +6,9 @@
 
 -  Construir una Single Page Application utlizando las tecnologías: **React**, **Redux**, **Node**, **Express** y **Sequelize**.
 -  Poner en práctica recursos básicos de estilos y diseño (UX : UI).
--  Afirmar y conectar los conceptos aprendidos en la carrera.
+-  Afirmar y conectar los conceptos báscios aprendidos en la carrera.
 -  Aprender mejores prácticas.
 -  Aprender y practicar el workflow de GIT.
--  Utilizar y practicar testing.
 
 ## **📖 ENUNCIADO GENERAL**
 
@@ -36,4 +35,10 @@ npm -v
 ```
 ---
 
-![Rickandmorty](https://github.com/BenjaMura/Rick_and_Morty/blob/main/Client/src/img/RickAndMortyDemo.mp4)
+## **💻 DEMO**
+
+<video controls>
+  <source src="https://github.com/BenjaMura/Rick_and_Morty/blob/main/Client/src/img/RickAndMortyDemo.mp4" type="video/mp4">
+</video>
+
+![Rickandmorty](https://github.com/BenjaMura/Rick_and_Morty/blob/main/Client/src/img/Rick-and-Morty-space.jpg)
