@@ -37,8 +37,6 @@ npm -v
 
 ## **💻 DEMO**
 
-<video controls>
-  <source src="https://github.com/BenjaMura/Rick_and_Morty/blob/main/Client/src/img/RickAndMortyDemo.mp4" type="video/mp4">
-</video>
+[![Demo del Proyecto](https://github.com/BenjaMura/Rick_and_Morty/blob/main/Client/src/img/RickAndMortyDemo.mp4)](https://github.com/BenjaMura/Rick_and_Morty/blob/main/Client/src/img/RickAndMortyDemo.mp4)
 
 ![Rickandmorty](https://github.com/BenjaMura/Rick_and_Morty/blob/main/Client/src/img/Rick-and-Morty-space.jpg)
